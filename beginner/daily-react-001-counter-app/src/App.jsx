@@ -5,17 +5,17 @@ function App() {
   const [count, setCount] = useState(0);
   const MAX_VALUE = 8;
 
-  function handleDecrease() {
+  const handleDecrease = () => {
 
     setCount((prev) => prev > 0 ? prev - 1 : prev)
   }
 
-  function handleIncrease() {
+  const handleIncrease = () => {
 
     setCount((prev) => prev < MAX_VALUE ? prev + 1 : prev)
   }
 
-  function handleReset() {
+  const handleReset = () => {
     setCount(0)
   }
 
