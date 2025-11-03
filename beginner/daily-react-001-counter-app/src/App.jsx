@@ -3,20 +3,16 @@ import { useState } from 'react'
 
 function App() {
   const [count, setCount] = useState(0);
-  const maxValue = 8;
+  const MAX_VALUE = 8;
 
   function handleDecrease() {
-    if (count === 0) {
-      return;
-    }
-    setCount((prev) => prev - 1)
+
+    setCount((prev) => prev > 0 ? prev - 1 : prev)
   }
 
   function handleIncrease() {
-    if (count === maxValue) {
-      return;
-    }
-    setCount((prev) => prev + 1)
+
+    setCount((prev) => prev < MAX_VALUE ? prev + 1 : prev)
   }
 
   function handleReset() {
@@ -30,14 +26,22 @@ function App() {
       </header>
       <main>
 
-        <div class="btn-container">
-          <button onClick={handleDecrease} class="btn btn-decrease">-</button>
-          <div class="display">
+        <div className="btn-container">
+          <button
+            onClick={handleDecrease}
+            className="btn btn-decrease"
+            disabled={count === 0}>-</button>
+          <div className="display">
             {count}
           </div>
-          <button onClick={handleIncrease} class="btn btn-increase">+</button>
+          <button
+            onClick={handleIncrease}
+            className="btn btn-increase"
+            disabled={count === MAX_VALUE}>+</button>
         </div>
-        <button onClick={handleReset} class="btn btn-reset">Reset</button>
+        <button
+          onClick={handleReset}
+          className="btn btn-reset">Reset</button>
       </main>
     </>
   )
