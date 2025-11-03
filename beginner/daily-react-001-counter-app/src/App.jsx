@@ -4,6 +4,17 @@ import { useState } from 'react'
 function App() {
   const [count, setCount] = useState(0);
 
+  function handleDecrease() {
+    if (count === 0) {
+      return;
+    }
+    setCount((prev) => prev - 1)
+  }
+
+  function handleIncrease() {
+    setCount((prev) => prev + 1)
+  }
+
   return (
     <>
       <header>
@@ -12,9 +23,9 @@ function App() {
       <main>
 
         <div>
-          <button onClick={() => setCount((prev) => prev - 1)}>-</button>
+          <button onClick={handleDecrease}>-</button>
           <div>{count}</div>
-          <button onClick={() => setCount((prev) => prev + 1)}>+</button>
+          <button onClick={handleIncrease}>+</button>
         </div>
         <button onClick={() => setCount(0)}>Reset</button>
       </main>
