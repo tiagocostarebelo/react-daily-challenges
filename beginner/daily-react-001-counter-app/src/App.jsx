@@ -10,13 +10,13 @@ function App() {
         <h1>Counter</h1>
       </header>
       <main>
+
         <div>
-          <div>{count}</div>
-        </div>
-        <div>
-          <button onClick={() => setCount((prev) => prev + 1)}>+</button>
           <button onClick={() => setCount((prev) => prev - 1)}>-</button>
+          <div>{count}</div>
+          <button onClick={() => setCount((prev) => prev + 1)}>+</button>
         </div>
+        <button onClick={() => setCount(0)}>Reset</button>
       </main>
     </>
   )
