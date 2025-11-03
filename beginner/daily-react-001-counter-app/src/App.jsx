@@ -15,6 +15,10 @@ function App() {
     setCount((prev) => prev + 1)
   }
 
+  function handleReset() {
+    setCount(0)
+  }
+
   return (
     <>
       <header>
@@ -27,7 +31,7 @@ function App() {
           <div>{count}</div>
           <button onClick={handleIncrease}>+</button>
         </div>
-        <button onClick={() => setCount(0)}>Reset</button>
+        <button onClick={handleReset}>Reset</button>
       </main>
     </>
   )
