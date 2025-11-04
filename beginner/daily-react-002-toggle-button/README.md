@@ -1,16 +1,37 @@
-# React + Vite
+# Toggle Button
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**The challenge:**
+Create a button that toggles between two states — for example, “ON”/“OFF” or “Show”/“Hide”.
 
-Currently, two official plugins are available:
+## Core Concepts:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Boolean state management with useState.
+- Conditional rendering and styling based on state.
+- Simple UI state logic.
 
-## React Compiler
+## Additional Steps
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Use CSS transitions for smooth state changes.
+- AAllow keyboard accessibility with Enter or Space.
+- Abstract toggle logic into a custom hook (useToggle).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Approach
+
+Another challenge focusing on the use of useState hook, conditional rendering and this time adding styling based on state.
+
+
+I started by building a functional version of the toggle button, then iteratively improved the code by:
+
+- Simplifying conditional logic in the handler function
+
+- Adding conditional rendering and styling based on the state
+
+- Improving styles with keyframe animations and transitions
+
+
+
+## Final thoughts
+
+While straightforward, this project effectively demonstrates core React concepts like state management and event handling, as well as conditional rendering and styling based on state and state changes.
+The challenge today was creating the custom hook for the useToggle.

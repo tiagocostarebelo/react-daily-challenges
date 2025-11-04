@@ -1,20 +1,20 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import Button from './components/Button';
 
 
 function App() {
-  const [isSwitched, setIsWitched] = useState(false);
+  const [isSwitched, setIsSwitched] = useState(false);
 
-  const handleClick = () => {
-    setIsWitched(!isSwitched)
-  }
+  const handleClick = () => setIsSwitched(!isSwitched);
+
 
   return (
     <>
       <main className={isSwitched ? "light" : ""}>
-        <button
+        <Button
           onClick={handleClick}
-          className={isSwitched ? "" : "light"}
-        >{isSwitched ? "Switch Off" : "Switch On"}</button>
+          isSwitched={isSwitched}
+        >{isSwitched}</Button>
       </main>
     </>
   )
