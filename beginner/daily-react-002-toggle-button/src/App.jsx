@@ -10,11 +10,11 @@ function App() {
 
   return (
     <>
-      <main className={isSwitched ? "light" : ""}>
+      <main className={isSwitched ? "light" : "dark"}>
         <Button
           onClick={handleClick}
           isSwitched={isSwitched}
-        >{isSwitched}</Button>
+        />
       </main>
     </>
   )

@@ -11,8 +11,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 main {
   display: flex;
   align-items: center;
@@ -23,7 +21,14 @@ main {
   transition: background-color 0.6s ease;
 }
 
+main.dark {
+  background-color: #242424;
+  color: #fff;
+}
+
 main.light {
+  background-color: bisque;
+  color: #242424;
   animation: fadePulse 1s ease-in-out;
 }
 
@@ -52,7 +57,12 @@ button {
   transition: background-color 0.6s ease, color 0.6s ease;
 }
 
-.light {
+button.light {
   background-color: bisque;
   color: #242424;
+}
+
+button.dark {
+  background-color: #242424;
+  color: bisque;
 }
