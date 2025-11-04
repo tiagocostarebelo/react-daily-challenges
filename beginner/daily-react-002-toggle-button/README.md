@@ -12,8 +12,7 @@ Create a button that toggles between two states — for example, “ON”/“OFF
 ## Additional Steps
 
 - Use CSS transitions for smooth state changes.
-- AAllow keyboard accessibility with Enter or Space.
-- Abstract toggle logic into a custom hook (useToggle).
+- Allow keyboard accessibility with Enter or Space.
 
 
 ## Approach

@@ -29,6 +29,8 @@ Each challenge includes:
 ## Topics Covered
 
 - State Management with `useState`  
+- Conditional Rendering and Styling based on State
+- Create Components
 
 
 ---
@@ -61,6 +63,7 @@ npm run dev
 ## Progress Log
 
 **2025-11-03** - Simple Counter - **Focus Area:** useState Hook
+**2025-11-04** - Toggle Button  - **Focus Area:** useState hook, Conditional Rendering, Styling based on state
 
 
 ## How to Contribute
