@@ -20,6 +20,25 @@ main {
   width: 100vw;
   height: 100vh;
 
+  transition: background-color 0.6s ease;
+}
+
+main.light {
+  animation: fadePulse 1s ease-in-out;
+}
+
+@keyframes fadePulse {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
 }
 
 button {
@@ -29,6 +48,8 @@ button {
 
   font-size: 1.5rem;
   font-weight: 500;
+
+  transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 .light {
