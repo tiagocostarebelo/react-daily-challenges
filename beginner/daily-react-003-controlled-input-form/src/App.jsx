@@ -2,11 +2,30 @@ import { useState } from 'react'
 
 
 function App() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+  });
+  const [submittedData, setSubmittedData] = useState();
 
-  const handleSubmit = () => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    //basic validation
+    if (!formData.name.trim() || !formData.email.trim()) {
+      alert('Please fill in both fields');
+      return;
+    }
+
+    setSubmittedData(formData);
+
+    //reset form after submission
+    setFormData({ name: '', email: '' })
   }
 
   return (
@@ -19,28 +38,31 @@ function App() {
           <label htmlFor='nameInput'>Your name here</label><br />
           <input
             type="text"
-            id="nameInput"
-            name="nameInput"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            defaultValue="Your name here"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Enter your name"
             required /><br />
 
           <label htmlFor='emailInput'>Your email here</label><br />
           <input
             type="email"
-            id="emailInput"
-            name="emailInput"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            defaultValue="Your email here"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Enter your email"
             required /><br />
           <button type="submit">Submit</button>
         </form>
-        <div>
-          {name && <p>{name}</p>}
-          {email && <p>{email}</p>}
-        </div>
+        {submittedData && (
+          <div className="preview">
+            <h3>Submitted Data</h3>
+            <p><strong>Name:</strong> {submittedData.name}</p>
+            <p><strong>Email:</strong> {submittedData.email}</p>
+          </div>
+        )}
       </main>
     </>
   )
