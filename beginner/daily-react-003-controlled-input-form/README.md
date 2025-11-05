@@ -1,16 +1,39 @@
-# React + Vite
+# Controlled Input form 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**The challenge:**
+Implement a simple form that updates live as the user types (e.g., name and email) and displays submitted data.
 
-Currently, two official plugins are available:
+## Core Concepts:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Controlled components (form fields synced with state).
+- Handling form submission.
+- State reset and validation basics.
 
-## React Compiler
+## Additional Steps
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Add basic validation messages.
+- Combine multiple inputs into a formData object.
+- Display submitted data in a styled preview.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Approach
+
+This challenge focuses again on state management, but this time with form data and controlled components.
+
+I began by creating the input fields and the form container, setting up individual state variables for each input and handling onChange inline.
+It worked - but the code was not DRY.
+
+To improve readability:
+
+- I combined the name and email fields into a single formData state object
+- Created a handleChange function to update state dynamically and handle basic validation
+- Added a handleSubmit function to capture and store the submitted data in a new submittedData state variable
+- Updated the JSX to reflect the new structure and render the submitted data
+
+
+
+## Final thoughts
+
+This challenge made me dig deeper into React 19's documentation on form and inputs.
+It helped clarify how controlled components work, and how they differ from uncontrolled components - a core concept in handling user input effectively in React.
+
