@@ -1,11 +1,38 @@
 import { useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [hexValue, setHexValue] = useState('');
+
+  const handleChange = (e) => {
+    setHexValue(e.target.value);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+  }
 
   return (
     <>
-      Hello
+      <header>
+        <h1>Check your Hex</h1>
+      </header>
+      <main>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="hexInput">Hex value</label>
+          <input
+            type="text"
+            id="hexInput"
+            name="hex"
+            value={hexValue}
+            onChange={handleChange}
+            placeholder='Enter your hex code'
+            required
+          />
+          <button type="submit">Submit</button>
+        </form>
+        <h1>{hexValue}</h1>
+      </main>
     </>
   )
 }
