@@ -1,16 +1,28 @@
-# React + Vite
+# Colox Box Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**The challenge:**
+Create a tool where users input a color (e.g., hex or text) and render a box displaying that color.
 
-Currently, two official plugins are available:
+## Core Concepts:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Dynamic inline styling in React.
+- HMapping user input to visual output.
 
-## React Compiler
+## Additional Steps
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Generate random colors.
+- Store color history and allow selection.
+- Add copy-to-clipboard functionality.
+- Include a RGB display with the HEX code converted
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Approach
+
+Working with State again, but this time, the challenge was to dynamically use state in the inline styling, to map it and display the color box.
+
+
+
+## Final thoughts
+
+WIP
+

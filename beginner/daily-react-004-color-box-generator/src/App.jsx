@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import Header from './components/Header';
+import ColorInput from './components/ColorInput';
+import ColorBox from './components/ColorBox';
 
 function App() {
   const [hexValue, setHexValue] = useState('');
@@ -7,32 +10,13 @@ function App() {
     setHexValue(prev => e.target.value);
   }
 
-
-
   return (
     <>
-      <header className="header">
-        <h1 className="logo">Check your Hex</h1>
-      </header>
+      <Header />
       <main>
         <div className="container">
-          <form >
-            <label htmlFor="hexInput">Hex value</label>
-            <input
-              type="text"
-              id="hexInput"
-              name="hex"
-              value={hexValue}
-              onChange={handleChange}
-              placeholder='Enter your hex code'
-              required
-            />
-          </form>
-          <div>
-            {hexValue && <div className="color-box" style={{ backgroundColor: hexValue }}>
-
-            </div>}
-          </div>
+          <ColorInput value={hexValue} onChange={handleChange} />
+          <ColorBox color={hexValue} />
         </div>
 
       </main>

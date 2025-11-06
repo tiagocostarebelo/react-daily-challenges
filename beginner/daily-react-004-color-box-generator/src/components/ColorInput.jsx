@@ -1,0 +1,20 @@
+import React from 'react'
+
+const ColorInput = ({ value, onChange }) => {
+    return (
+        <form >
+            <label htmlFor="hexInput">Hex value</label>
+            <input
+                type="text"
+                id="hexInput"
+                name="hex"
+                value={value}
+                onChange={onChange}
+                placeholder='Enter your hex code'
+                required
+            />
+        </form>
+    )
+}
+
+export default ColorInput
