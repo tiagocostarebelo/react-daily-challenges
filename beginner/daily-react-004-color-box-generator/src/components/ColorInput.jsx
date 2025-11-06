@@ -10,7 +10,7 @@ const ColorInput = ({ value, onChange }) => {
                 name="hex"
                 value={value}
                 onChange={onChange}
-                placeholder='Enter your hex code'
+                placeholder='Enter your hex code (e.g. #3498db)'
                 required
             />
         </form>
