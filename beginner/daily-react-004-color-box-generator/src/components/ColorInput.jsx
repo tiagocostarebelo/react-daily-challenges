@@ -3,7 +3,7 @@ import React from 'react'
 const ColorInput = ({ value, onChange }) => {
     return (
         <form >
-            <label htmlFor="hexInput">Hex value</label>
+            <label htmlFor="hexInput">HEX</label>
             <input
                 type="text"
                 id="hexInput"
