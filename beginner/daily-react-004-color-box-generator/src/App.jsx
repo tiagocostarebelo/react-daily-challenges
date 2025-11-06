@@ -14,25 +14,30 @@ function App() {
 
   return (
     <>
-      <header>
-        <h1>Check your Hex</h1>
+      <header className="header">
+        <h1 className="logo">Check your Hex</h1>
       </header>
       <main>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="hexInput">Hex value</label>
-          <input
-            type="text"
-            id="hexInput"
-            name="hex"
-            value={hexValue}
-            onChange={handleChange}
-            placeholder='Enter your hex code'
-            required
-          />
-        </form>
-        <div>
-          <div className="color-box" style={{ backgroundColor: hexValue }}></div>
+        <div className="container">
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="hexInput">Hex value</label>
+            <input
+              type="text"
+              id="hexInput"
+              name="hex"
+              value={hexValue}
+              onChange={handleChange}
+              placeholder='Enter your hex code'
+              required
+            />
+          </form>
+          <div>
+            {hexValue && <div className="color-box" style={{ backgroundColor: hexValue }}>
+
+            </div>}
+          </div>
         </div>
+
       </main>
     </>
   )
