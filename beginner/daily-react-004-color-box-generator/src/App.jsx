@@ -4,13 +4,10 @@ function App() {
   const [hexValue, setHexValue] = useState('');
 
   const handleChange = (e) => {
-    setHexValue(e.target.value);
+    setHexValue(prev => e.target.value);
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
 
-  }
 
   return (
     <>
@@ -19,7 +16,7 @@ function App() {
       </header>
       <main>
         <div className="container">
-          <form onSubmit={handleSubmit}>
+          <form >
             <label htmlFor="hexInput">Hex value</label>
             <input
               type="text"

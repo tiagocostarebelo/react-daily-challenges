@@ -67,6 +67,7 @@ npm run dev
 **2025-11-03** - Simple Counter - **Focus Area:** useState Hook
 **2025-11-04** - Toggle Button  - **Focus Area:** useState hook, Conditional Rendering, Styling based on state
 **2025-11-05** - Controlled Input Form - **Focus Area:** useState, combining multiple inputs into a single formData object, controlled components, handling input field changes, handling form submission, state reset
+**2025-11-06** - Color Box Generator - **Focus Area:** Dynamic inline styling in React, Mapping user input to visual output
 
 
 ## How to Contribute
