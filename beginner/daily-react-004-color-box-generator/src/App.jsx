@@ -29,9 +29,10 @@ function App() {
             placeholder='Enter your hex code'
             required
           />
-          <button type="submit">Submit</button>
         </form>
-        <h1>{hexValue}</h1>
+        <div>
+          <div className="color-box" style={{ backgroundColor: hexValue }}></div>
+        </div>
       </main>
     </>
   )
