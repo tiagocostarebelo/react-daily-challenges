@@ -1,0 +1,27 @@
+.switch-container {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.switch {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid rgb(58, 58, 58);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.switch-light,
+.switch-dark {
+    font-size: 2.25rem;
+    color: lightgray;
+    cursor: pointer;
+}
+
+.active {
+    color: black;
+}
