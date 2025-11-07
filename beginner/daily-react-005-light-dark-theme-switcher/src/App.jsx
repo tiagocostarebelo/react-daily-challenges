@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import { CiLight } from "react-icons/ci";
-import { MdDarkMode } from "react-icons/md";
+import SwitchToggle from './components/SwitchToggle';
 
 function App() {
   const [isLightMode, setIsLightMode] = useState(true);
@@ -12,12 +11,7 @@ function App() {
 
   return (
     <main className={`${isLightMode ? "light-theme" : "dark-theme"}`}>
-      <div className="switch-container">
-        <div className="switch">
-          <CiLight className={`switch-light ${isLightMode ? "active" : ""}`} onClick={handleClick} />
-          <MdDarkMode className={`switch-dark ${!isLightMode ? "active" : ""}`} onClick={handleClick} />
-        </div>
-      </div>
+      <SwitchToggle isLightMode={isLightMode} onClick={handleClick} />
     </main>
   )
 }
