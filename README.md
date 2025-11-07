@@ -33,6 +33,9 @@ Each challenge includes:
 - Create Components
 - Controlled Components
 - formData object
+- Data persistence with localStorage
+- Custom hooks and separation of logic
+- Event handling and input validation
 
 
 ---
@@ -68,6 +71,7 @@ npm run dev
 **2025-11-04** - Toggle Button  - **Focus Area:** useState hook, Conditional Rendering, Styling based on state
 **2025-11-05** - Controlled Input Form - **Focus Area:** useState, combining multiple inputs into a single formData object, controlled components, handling input field changes, handling form submission, state reset
 **2025-11-06** - Color Box Generator - **Focus Area:** State management, Dynamic inline styling in React, Mapping user input to visual output, handling events, state reset, Reusable components
+**2025-11-07** - Color Box Generator - **Focus Area:** Reusable components, custom hooks, theme persistence with localStorage, global state handling
 
 
 ## How to Contribute

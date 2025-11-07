@@ -1,16 +1,34 @@
-# React + Vite
+# Light Dark Switch
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**The challenge:**
+Build a toggle that switches between light and dark UI themes.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Core Concepts:
 
-## React Compiler
+- Conditional rendering with theme-based classNames or CSS variables.
+- Managing global theme state with useState (or Context for scalability).
+- Applying theme-based global styles in React.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Additional Steps
 
-## Expanding the ESLint configuration
+- Persist theme preference in localStorage.
+- Create a custom hook (useTheme) to encapsulate logic and simplify usage.
+- Add animation or transition effects for smoother theme switching.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Approach
+
+This challenge built upon the logic of the Toggle Button (Day 2), but applied it globally for theming.
+I started with a simple light/dark toggle controlled via state, then extended it by:
+
+- Persisting the selected theme using localStorage for consistency across sessions.
+- Extracting theme logic into a custom hook (useTheme) for cleaner and reusable code.
+- Enhancing the UX with animated transitions during theme changes.
+
+
+## Final thoughts
+
+A great challenge for reinforcing state management, prop handling, custom components, custom hooks, and localStorage persistence.
+It also introduced the importance of creating scalable theme logic — something that can be reused in larger projects.
+
