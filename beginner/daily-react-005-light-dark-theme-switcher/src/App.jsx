@@ -3,19 +3,19 @@ import { CiLight } from "react-icons/ci";
 import { MdDarkMode } from "react-icons/md";
 
 function App() {
-  const [switchLD, setSwitchLD] = useState(true);
+  const [isLightMode, setIsLightMode] = useState(true);
 
   const handleClick = () => {
-    setSwitchLD(!switchLD)
+    setIsLightMode(!isLightMode)
   }
 
 
   return (
-    <main>
+    <main className={`${isLightMode ? "light-theme" : "dark-theme"}`}>
       <div className="switch-container">
         <div className="switch">
-          <CiLight className={`switch-light ${switchLD ? "active" : ""}`} onClick={handleClick} />
-          <MdDarkMode className={`switch-dark ${!switchLD ? "active" : ""}`} onClick={handleClick} />
+          <CiLight className={`switch-light ${isLightMode ? "active" : ""}`} onClick={handleClick} />
+          <MdDarkMode className={`switch-dark ${!isLightMode ? "active" : ""}`} onClick={handleClick} />
         </div>
       </div>
     </main>
