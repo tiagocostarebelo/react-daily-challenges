@@ -1,20 +1,9 @@
 import { useState, useEffect } from 'react'
 import SwitchToggle from './components/SwitchToggle';
+import useTheme from './hooks/useTheme';
 
 function App() {
-  const [isLightMode, setIsLightMode] = useState(() => {
-    const savedTheme = JSON.parse(localStorage.getItem('themePreference'));
-    return savedTheme !== null ? savedTheme : true;
-  });
-
-  const handleClick = () => {
-    setIsLightMode((prev) => !prev);
-  };
-
-  useEffect(() => {
-    localStorage.setItem('themePreference', JSON.stringify(isLightMode));
-  }, [isLightMode]);
-
+  const { isLightMode, handleClick } = useTheme();
 
   return (
     <main className={`${isLightMode ? "light-theme" : "dark-theme"}`}>
