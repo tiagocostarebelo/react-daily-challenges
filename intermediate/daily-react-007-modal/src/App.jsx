@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import Modal from './components/Modal';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,15 +15,7 @@ function App() {
         <div >
           <button onClick={handleClick}>Click Me</button>
         </div>
-        {isModalOpen && <><div className="backdrop" onClick={handleClick}></div>
-          <div className="dialog">
-            <h2>Modal Open</h2>
-            <p>
-              Closable using the "Close" button, the Esc key, or by clicking outside the
-              dialog. "Light dismiss" behavior.
-            </p>
-            <button onClick={handleClick}>Close</button>
-          </div></>}
+        {isModalOpen && <Modal onClick={handleClick} />}
       </main>
     </>
   )

@@ -1,16 +1,36 @@
-# React + Vite
+# ToDo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**The challenge:**
+Build a functional todo list allowing adding, marking complete, and deleting tasks.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Core Concepts:
 
-## React Compiler
+- Array state management (useState).
+- MConditional rendering based on task completion.
+- AHandling lists with keys and event handlers.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Additional Steps
 
-## Expanding the ESLint configuration
+- Add filters (All, Active, Completed).
+- Persist data to localStorage.
+- Introduce context or reducer for state management.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Approach
+
+This challenge brought together several concepts from previous exercises — handling inputs, toggling states, conditional rendering, and managing arrays.
+
+I began by setting up a state array to hold task objects, each containing id, text, and completed properties. Adding a task involved updating the array immutably using the spread operator.
+Toggling completion status required mapping through the list and inverting the completed flag of the matching task. Deletion was handled with filter() to remove the selected task by id.
+
+Once the core logic was stable, I implemented conditional styling to visually differentiate completed tasks and explored filtering logic to display subsets of the list.
+
+This exercise helped reinforce React’s one-way data flow and the importance of writing pure functions when updating state.
+
+## Final thoughts
+
+A well-rounded challenge that consolidated many fundamental React concepts.
+It reminded me that managing array state updates effectively is key to writing predictable UI logic.
+Most importantly, I learned to keep state logic simple and readable instead of over-engineering early — a mindset that’s crucial for scaling React apps confidently.
+

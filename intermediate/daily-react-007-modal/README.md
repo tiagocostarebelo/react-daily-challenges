@@ -1,16 +1,35 @@
-# React + Vite
+# Modal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**The challenge:**
+Build a modal that opens and closes via state.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Core Concepts:
 
-## React Compiler
+- Conditional rendering with state.
+- Composability (children inside modal).
+- Handling click events to close modals.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Additional Steps
 
-## Expanding the ESLint configuration
+- Animate modal entry/exit.
+- Add overlay click-to-close.
+- Use portals to render modal outside the main DOM tree.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Approach
+
+Today's challenge uses State management, event handlers, but builds in to a very widely used element in Web development, Modals.
+First I built the basic logic to handle the modal.
+
+- useState hook: cleanly manages isModalOpen state.
+- Conditional rendering: displays the modal only when true.
+- Click handler: toggles modal visibility efficiently.
+- Backdrop click-to-close: already implements the "light dismiss" behavior.
+
+
+## Final thoughts
+
+A great challenge for reinforcing state management, prop handling, custom components, custom hooks, and localStorage persistence.
+It also introduced the importance of creating scalable theme logic — something that can be reused in larger projects.
+
