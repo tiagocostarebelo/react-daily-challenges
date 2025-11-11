@@ -4,18 +4,19 @@ import Modal from './components/Modal';
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleClick = () => {
-    setIsModalOpen(!isModalOpen);
-  }
 
   return (
     <>
       <main>
 
         <div >
-          <button onClick={handleClick}>Click Me</button>
+          <button onClick={() => setIsModalOpen(true)}>Click Me</button>
         </div>
-        {isModalOpen && <Modal onClick={handleClick} />}
+        {isModalOpen && (
+          <Modal onClose={() => { setIsModalOpen(false) }}>
+            <h2>Modal Open</h2>
+            <p>This is modal canbe closed by clicking outside or pressing Esc</p>
+          </Modal>)}
       </main>
     </>
   )

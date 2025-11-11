@@ -1,15 +1,22 @@
 import React from 'react'
+import { useEffect } from 'react'
 
-const Modal = ({ onClick }) => {
+const Modal = ({ onClose, children }) => {
+
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === "Escape") onClose();
+        };
+        window.addEventListener("keydown", handleEsc);
+        return () => window.removeEventListener("keydown", handleEsc);
+    }, [onClose]);
+
     return (
-        <><div className="backdrop" onClick={onClick}></div>
+        <>
+            <div className="backdrop" onClick={onClose}></div>
             <div className="dialog">
-                <h2>Modal Open</h2>
-                <p>
-                    Closable using the "Close" button, the Esc key, or by clicking outside the
-                    dialog. "Light dismiss" behavior.
-                </p>
-                <button onClick={onClick}>Close</button>
+                {children}
+                <button onClick={onClose}>Close</button>
             </div>
         </>
     )
