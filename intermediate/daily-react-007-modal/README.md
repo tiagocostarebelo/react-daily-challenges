@@ -27,9 +27,15 @@ First I built the basic logic to handle the modal.
 - Click handler: toggles modal visibility efficiently.
 - Backdrop click-to-close: already implements the "light dismiss" behavior.
 
+Next steps:
+
+- separate the elements and create a Modal component
+- separate the logic and update it following React's best practices
+- handle the Escape key to close the Modal
+- use createPortal() to render the Modal outside the DOM element
 
 ## Final thoughts
 
-A great challenge for reinforcing state management, prop handling, custom components, custom hooks, and localStorage persistence.
-It also introduced the importance of creating scalable theme logic — something that can be reused in larger projects.
+A great challenge for reinforcing state management, prop handling, custom components, and a learning step to create Modals using best practices'.
+Using createPortal() and understanding it and how the elements render was a great learning step.
 

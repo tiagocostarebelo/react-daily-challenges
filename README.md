@@ -72,7 +72,8 @@ npm run dev
 **2025-11-05** - Controlled Input Form - **Focus Area:** useState, combining multiple inputs into a single formData object, controlled components, handling input field changes, handling form submission, state reset
 **2025-11-06** - Color Box Generator - **Focus Area:** State management, Dynamic inline styling in React, Mapping user input to visual output, handling events, state reset, Reusable components
 **2025-11-07** - Color Box Generator - **Focus Area:** Reusable components, custom hooks, theme persistence with localStorage, global state handling
-
+**2025-11-10** - ToDo App - **Focus Area:** - Array state management, handling events
+**2025-11-11** - Modal - **Focus Area:** - useEffect to handle external elements, handling events, createPortal() use to render elements outside the DOM
 
 ## How to Contribute
 This is a personal learning journey, but feedback is welcome!

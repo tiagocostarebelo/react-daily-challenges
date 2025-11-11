@@ -7,8 +7,8 @@ Build a functional todo list allowing adding, marking complete, and deleting tas
 ## Core Concepts:
 
 - Array state management (useState).
-- MConditional rendering based on task completion.
-- AHandling lists with keys and event handlers.
+- Conditional rendering based on task completion.
+- Handling lists with keys and event handlers.
 
 ## Additional Steps
 
