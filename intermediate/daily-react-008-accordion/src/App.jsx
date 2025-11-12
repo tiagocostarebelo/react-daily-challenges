@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import Accordion from './components/Accordion';
 
 
 function App() {
@@ -22,15 +23,7 @@ function App() {
         <h1>Accordion</h1>
       </header>
       <main>
-        <div className="accordion">
-          <div className="accordion-item">
-            <div className="accordion-title" onClick={handleClick}>
-              <div>{accordionData.title}</div>
-              <div>+</div>
-            </div>
-            {isOpen && <div className="accordion-content">{accordionData.content}</div>}
-          </div>
-        </div>
+        <Accordion accordionData={accordionData} onClick={handleClick} isOpen={isOpen} />
       </main>
     </>
   )
