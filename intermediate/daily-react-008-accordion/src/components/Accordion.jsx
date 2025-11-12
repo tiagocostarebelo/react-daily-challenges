@@ -13,7 +13,7 @@ const Accordion = ({ title, content }) => {
             <div className="accordion-item">
                 <div className="accordion-title" onClick={handleClick}>
                     <div>{title}</div>
-                    <div>+</div>
+                    <div>{isOpen ? '-' : '+'}</div>
                 </div>
                 {isOpen && <div className="accordion-content">{content}</div>}
             </div>
