@@ -29,13 +29,15 @@ Each challenge includes:
 ## Topics Covered
 
 - State Management with `useState`  
-- Conditional Rendering and Styling based on State
-- Create Components
-- Controlled Components
-- formData object
+- Conditional Rendering and Dynamic Styling
+- Component Creation and Reusability
+- Controlled Components and Form Handling
+- Managing Form Data with Objects
 - Data persistence with localStorage
 - Custom hooks and separation of logic
-- Event handling and input validation
+- Event Handling and Input Validation
+- Managing Global vs Component-Level State
+- Portals and Side Effects with useEffect
 
 
 ---
@@ -74,6 +76,7 @@ npm run dev
 **2025-11-07** - Color Box Generator - **Focus Area:** Reusable components, custom hooks, theme persistence with localStorage, global state handling
 **2025-11-10** - ToDo App - **Focus Area:** - Array state management, handling events
 **2025-11-11** - Modal - **Focus Area:** - useEffect to handle external elements, handling events, createPortal() use to render elements outside the DOM
+**2025-11-12** - Accordion - **Focus Area:** - managing multiple open/closed states, conditional rendering, prop drilling, and state encapsulation within reusable components
 
 ## How to Contribute
 This is a personal learning journey, but feedback is welcome!
