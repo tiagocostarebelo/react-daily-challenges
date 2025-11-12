@@ -3,19 +3,41 @@ import Accordion from './components/Accordion';
 
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const accordionData = {
-    title: 'Section 1',
-    content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
-      laborum cupiditate possimus labore, hic temporibus velit dicta earum
-      suscipit commodi eum enim atque at? Et perspiciatis dolore iure
-      voluptatem.`
-  };
+  const accordionData = [
+    {
+      title: 'Section 1',
+      content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
+        laborum cupiditate possimus labore, hic temporibus velit dicta earum
+        suscipit commodi eum enim atque at? Et perspiciatis dolore iure
+        voluptatem.`
+    },
+    {
+      title: 'Section 2',
+      content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
+        laborum cupiditate possimus labore, hic temporibus velit dicta earum
+        suscipit commodi eum enim atque at? Et perspiciatis dolore iure
+        voluptatem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
+        laborum cupiditate possimus labore, hic temporibus velit dicta earum
+        suscipit commodi eum enim atque at? Et perspiciatis dolore iure
+        voluptatem.`
+    },
+    {
+      title: 'Section 3',
+      content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
+        laborum cupiditate possimus labore, hic temporibus velit dicta earum
+        suscipit commodi eum enim atque at? Et perspiciatis dolore iure
+        voluptatem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
+        laborum cupiditate possimus labore`
+    },
+    {
+      title: 'Section 4',
+      content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
+        laborum cupiditate possimus labore.`
+    }
+  ]
 
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
+
 
   return (
     <>
@@ -23,7 +45,13 @@ function App() {
         <h1>Accordion</h1>
       </header>
       <main>
-        <Accordion accordionData={accordionData} onClick={handleClick} isOpen={isOpen} />
+        {accordionData.map(({ title, content }) => (
+          <Accordion title={title} content={content} />
+        ))
+
+
+
+        }
       </main>
     </>
   )
