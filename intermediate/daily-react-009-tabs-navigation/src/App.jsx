@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { tabsData } from '../data/tabsData';
 
 function App() {
-  const [isTabActive, setIsTabActive] = useState("English");
+  const [activeTabTitle, setActiveTabTitle] = useState("English");
+  const activeTab = tabsData.find(tab => tab.title === activeTabTitle);
 
   const handleTabClick = (index) => {
-    setIsTabActive(tabsData[index].title)
+    setActiveTabTitle(tabsData[index].title)
   }
 
   return (
@@ -16,11 +17,11 @@ function App() {
       <main>
         <header>
           {tabsData.map(({ title }, index) => (
-            <div className={`tab ${isTabActive === title ? "active" : ""}`} key={index} onClick={() => handleTabClick(index)}>{title}</div>
+            <div className={`tab ${activeTabTitle === title ? "active" : ""}`} key={index} onClick={() => handleTabClick(index)}>{title}</div>
           ))}
         </header>
         <div>
-
+          <p>{activeTab.content}</p>
         </div>
       </main>
     </>
