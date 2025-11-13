@@ -29,6 +29,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  padding: 2rem;
 }
 
 h1 {
@@ -36,6 +37,32 @@ h1 {
   line-height: 1.1;
 }
 
+
+
+header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3rem;
+}
+
+.tab {
+  text-align: left;
+  cursor: pointer;
+  color: white;
+}
+
+.content-container {
+  min-height: 300px;
+  display: flex;
+  align-items: flex-start;
+}
+
 .active {
-  color: lightblue;
+  color: rgb(145, 246, 78);
+  font-weight: 700;
+}
+
+.content {
+  height: fit-content;
 }

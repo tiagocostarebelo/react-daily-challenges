@@ -15,13 +15,13 @@ function App() {
         <h1>Tabs Navigation</h1>
       </header>
       <main>
-        <header>
+        <header className="tab-container">
           {tabsData.map(({ title }, index) => (
-            <div className={`tab ${activeTabTitle === title ? "active" : ""}`} key={index} onClick={() => handleTabClick(index)}>{title}</div>
+            <div className={`tab tab-${activeTab.title} ${activeTabTitle === title ? "active" : ""}`} key={index} onClick={() => handleTabClick(index)}>{title}</div>
           ))}
         </header>
-        <div>
-          <p>{activeTab.content}</p>
+        <div className="content-container">
+          <p className={`content content-${activeTab.title}`}>{activeTab.content}</p>
         </div>
       </main>
     </>
