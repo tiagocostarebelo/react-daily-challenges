@@ -50,6 +50,10 @@ header {
   text-align: left;
   cursor: pointer;
   color: white;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
 }
 
 .content-container {

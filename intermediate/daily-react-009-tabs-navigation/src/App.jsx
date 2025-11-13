@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { tabsData } from '../data/tabsData';
+import Tab from './components/Tab';
 
 function App() {
   const [activeTabTitle, setActiveTabTitle] = useState("English");
@@ -15,9 +16,9 @@ function App() {
         <h1>Tabs Navigation</h1>
       </header>
       <main>
-        <header className="tab-container">
+        <header className="tab-container" role="tablist">
           {tabsData.map(({ title }, index) => (
-            <div className={`tab tab-${activeTab.title} ${activeTabTitle === title ? "active" : ""}`} key={index} onClick={() => handleTabClick(index)}>{title}</div>
+            <Tab title={title} isActive={activeTabTitle === title} onClick={() => handleTabClick(index)} key={index} />
           ))}
         </header>
         <div className="content-container">
