@@ -77,6 +77,7 @@ npm run dev
 **2025-11-10** - ToDo App - **Focus Area:** - Array state management, handling events
 **2025-11-11** - Modal - **Focus Area:** - useEffect to handle external elements, handling events, createPortal() use to render elements outside the DOM
 **2025-11-12** - Accordion - **Focus Area:** - managing multiple open/closed states, conditional rendering, prop drilling, and state encapsulation within reusable components
+**2025-11-13** - Tabs Navigation - **Focus Area:** - index-based state to control active tabs, dynamic component mapping, reusable tab and panel components, and clean separation of UI structure from interaction logic
 
 ## How to Contribute
 This is a personal learning journey, but feedback is welcome!
