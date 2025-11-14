@@ -1,8 +1,9 @@
 import React from 'react'
 
-const TabPanel = () => {
+const TabPanel = ({ activeTab }) => {
+    if (!activeTab) return null;
     return (
-        <div>TabPanel</div>
+        <p className={`content content-${activeTab.title}`}>{activeTab.content}</p>
     )
 }
 

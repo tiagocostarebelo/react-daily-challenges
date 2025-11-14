@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { tabsData } from '../data/tabsData';
 import Tab from './components/Tab';
+import TabPanel from './components/TabPanel';
 
 function App() {
   const [activeTabTitle, setActiveTabTitle] = useState("English");
@@ -22,7 +23,7 @@ function App() {
           ))}
         </header>
         <div className="content-container">
-          <p className={`content content-${activeTab.title}`}>{activeTab.content}</p>
+          <TabPanel activeTab={activeTab} />
         </div>
       </main>
     </>
