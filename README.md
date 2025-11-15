@@ -38,6 +38,9 @@ Each challenge includes:
 - Event Handling and Input Validation
 - Managing Global vs Component-Level State
 - Portals and Side Effects with useEffect
+- API Fetch using useEffect
+- Loading and Error handling with state
+- Displaying data on the page conditionally
 
 
 ---
@@ -78,6 +81,7 @@ npm run dev
 **2025-11-11** - Modal - **Focus Area:** - useEffect to handle external elements, handling events, createPortal() use to render elements outside the DOM
 **2025-11-12** - Accordion - **Focus Area:** - managing multiple open/closed states, conditional rendering, prop drilling, and state encapsulation within reusable components
 **2025-11-13** - Tabs Navigation - **Focus Area:** - index-based state to control active tabs, dynamic component mapping, reusable tab and panel components, and clean separation of UI structure from interaction logic
+**2025-11-14** - Api Fetch using useEffect - **Focus Area:** - use useEffect to fetch data from a public API
 
 ## How to Contribute
 This is a personal learning journey, but feedback is welcome!

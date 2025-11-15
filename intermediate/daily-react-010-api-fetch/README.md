@@ -1,16 +1,37 @@
-# React + Vite
+# API Fetch using useEffect
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**The challenge:**
+Fetch and display data from a public API using useEffect
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Core Concepts:
 
-## React Compiler
+- Managing side effects with useEffect.
+- Understanding how the dependency array affects re-renders and API calls.
+- Handling async data fetching with try...catch.
+- Managing loading and error states.
+- Conditionally rendering UI based on fetch results.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Additional Steps
 
-## Expanding the ESLint configuration
+- Introduce pagination or limit the number of results. - ToDo  
+- Add a retry button for failed requests. - ToDo 
+- Extract API logic into a reusable custom hook for cleaner separation (useFetch). - ToDo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Approach
+
+The solution focused on using useEffect to trigger the data fetch based on the input searched.
+
+Inside the effect:
+
+- An asynchronous function performs the fetch.
+- loading and error states are updated based on the outcome.
+- The response is validated and then passed into state.
+
+This pattern helps reinforce how React schedules effects, how asynchronous logic works inside them, and why cleanup functions matter in more complex scenarios.
+
+
+## Final thoughts
+
+This challenge was a solid opportunity to understand useEffect's behavior and how the dependency array controls when effects run. It also reinforced the basics of asynchronous fetching with try...catch, proper state management, and conditional rendering (loading, errors, and data output).
+
